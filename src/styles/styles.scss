@@ -4,10 +4,26 @@
   margin: 0;
   padding: 0;
 }
-
+html, body {
+  background-image: url('/src/images/logo.png') center center no-repeat;
+}
 .container {
   font-family: Chivo-Bold;
   font-size: 16px;
-  color: #66BB6A;
   text-align: left;
+  color: #000000;
+}
+.container a:hover {
+  color: #66BB6A;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+nav ul li {
+  list-style: none;
+}
+
+.logo {
+  background: url('/src/logo.png')
 }

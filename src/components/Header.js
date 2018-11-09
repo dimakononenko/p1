@@ -18,3 +18,15 @@ export default class Header extends React.Component {
     )
   }  
 };
+
+// export default class Content extends React.Component {
+//   render () {
+//     return (
+//       <div className="1screen">
+//         <h1>A New Way to Invest in Agriculture</h1>
+//         <p>Zou provides farmes, ranchers, private foresters, and agricultural producers with online self service applications and educational materials.</p>
+//         <button>Invest Now</button>
+//       </div>
+//     )
+//   }
+// };

@@ -8,11 +8,11 @@
 .container {
   display: flex;
   align-items: flex-start;
-  justify-content: flex-end;
+  border: #000000 solid;
 }
 
 nav {
-  margin: 0px 5% 0 20% ;
+  margin: 0px 5% 0 13% ;
   flex: 1;
   font-family: Chivo;
   font-size: 16px;
@@ -51,11 +51,9 @@ header button {
   color: #F1F8E9;
   border-radius: 5px;
   background: none;
-  z-index: 2;
   position: absolute;
   margin: 40px;
   right: 5%;
-  
 }
 
 nav a {
@@ -65,12 +63,22 @@ nav a {
 .container .illustration {
   justify-content: flex-end;
   position: relative;
-  z-index: -1;
+}
+
+
+
+.FirstScreen {
+
+}
+
+.illustrationLeaves {
 }
 
 .fsInfo {
-  margin: 10px 120px 120px 20%;
+  margin: 10px 120px 120px 13%;
   width: 473px;
+  position: absolute;
+  top: 216px;
 }
 
 .FirstScreen h1 {

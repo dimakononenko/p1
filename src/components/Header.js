@@ -20,7 +20,7 @@ export default class Header extends React.Component {
         </nav>  
         <button href="#!" className="button" data-micron="bounce">Sign Up</button>
         <img src={main_illustration} id="illustration"/>
-      </header>
+        </header>
     )
   }  
 };

@@ -8,7 +8,6 @@
 .container {
   display: flex;
   align-items: flex-start;
-  border: #000000 solid;
 }
 
 nav {
@@ -23,17 +22,23 @@ nav {
   padding-top: 45px;
 }
 
+button, a {
+  cursor:pointer;
+  outline:none;
+}
+
 nav a:hover {
   color: #66BB6A;
 }
 
 nav a:active {
   color: #66BB6A;
-  font-family: Chivo-Bold;
+  font-family: Chivo;
 }
 
 nav ul {
   display: flex;
+  margin-right: 30%;
 }
 
 nav ul li {
@@ -51,7 +56,6 @@ header button {
   color: #F1F8E9;
   border-radius: 5px;
   background: none;
-  position: absolute;
   margin: 40px;
   right: 5%;
 }
@@ -60,32 +64,34 @@ nav a {
   text-decoration: none;
 }
 
-.container .illustration {
-  justify-content: flex-end;
-  position: relative;
-}
-
-
-
 .FirstScreen {
-
+  display: flex;
+  justify-content: space-between;
 }
 
-.illustrationLeaves {
+#illustrationLeaves {
+  margin-top: 340px;
 }
 
 .fsInfo {
-  margin: 10px 120px 120px 13%;
-  width: 473px;
+  margin-top: 10px;
   position: absolute;
-  top: 216px;
+  width: 473px;
+  left: 13%;
 }
+
+#illustration {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
 
 .FirstScreen h1 {
   font-family: Chivo-Bold;
   font-size: 46px;
   color: #000000;
-  text-align: left;
   line-height: 64px;
 }
 

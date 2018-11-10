@@ -1,6 +1,5 @@
 import React from 'react';
 import img from '../images/logo.png';
-import main_illustration from '../images/main_illustration.png';
 
 
 
@@ -19,7 +18,6 @@ export default class Header extends React.Component {
           </ul>
         </nav>  
         <button href="#!" className="button" data-micron="bounce">Sign Up</button>
-        <img src={main_illustration} id="illustration"/>
         </header>
     )
   }  

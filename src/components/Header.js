@@ -3,16 +3,12 @@ import img from '../images/logo.png';
 import main_illustration from '../images/main_illustration.png';
 import styled from 'styled-components';
 
+
 const Header = styled.div`
   border: #000000 solid;
 `
-const Img = styled.img`
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: -1;
-  max-width: 660px;
-  width: 60%;
+const Nav = styled.nav`
+  font-family: Chivo;
 `
 
 const Button = styled.button`
@@ -27,12 +23,20 @@ const Button = styled.button`
   background: none;
   position: relative;
   margin-right: 20px;
-`
+  `
+  const Img = styled.img`
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    max-width: 660px;
+    width: 60%;
+  `
 
 
 export default () => (
   <Header>
-    <nav>
+    <Nav>
       <img src={img} id="logo"/>
       <div className="nav-toggle">
         <div className="nav-toggle-bar"></div>
@@ -45,7 +49,7 @@ export default () => (
         <li><a ahref="#">Contact</a></li>
       </ul>
       <Button data-micron="bounce">Sign Up</Button>
-    </nav>
+    </Nav>
     <Img src={main_illustration} id="illustration"></Img>
   </Header>
 )

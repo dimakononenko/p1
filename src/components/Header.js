@@ -3,7 +3,6 @@ import img from '../images/logo.png';
 import main_illustration from '../images/main_illustration.png';
 import styled from 'styled-components';
 
-
 const Header = styled.div`
   border: #000000 solid;
 `

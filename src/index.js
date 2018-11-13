@@ -4,35 +4,28 @@ import Header from './components/Header';
 import FirstScreen from './components/FirstScreen';
 import SecondSection from './components/SecondSection';
 import './styles/styles.scss';
-import styled from 'styled-components';
-
-export const Site = styled.div`
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-`
+import styled, { createGlobalStyle } from 'styled-components';
+import GlobalStyle from './theme/GlobalStyle';
 
 
-const jsx = (
-  <Site>
-    <Header />
-    <FirstScreen />
-    <SecondSection />
-  </Site>
-)
+export const Site = styled.div``
 
-// class Site extends Comment {
-//   render () {
-//     return (
-//       <div>
-//         <Header />
-//         <FirstScreen />
-//         <SecondSection />
-//       </div>
-//     )
-//   }
-// }
 
-ReactDOM.render(jsx, document.getElementById('app'));
+class App extends Component {
+  render () {
+    return (
+      <React.Fragment>
+        <Site>
+          <GlobalStyle />
+          <Header />
+          <FirstScreen />
+          <SecondSection />
+        </Site>
+      </React.Fragment>
+    )
+  }
+}
+
+ReactDOM.render(<App/>, document.getElementById('app'));
 
 module.hot.accept();

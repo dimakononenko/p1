@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import Header from './components/Header';
-import FirstScreen from './components/FirstScreen';
-import SecondSection from './components/SecondSection';
-import './styles/styles.scss';
-import styled, { createGlobalStyle } from 'styled-components';
+import Header from './components/Header/Header';
+import FirstScreen from './components/firstScreen/FirstScreen';
+import SecondSection from './components/SecondSection/SecondSection';
+import styled from 'styled-components';
 import GlobalStyle from './theme/GlobalStyle';
 
 
 export const Site = styled.div``
 
-
-class App extends Component {
+class Layout extends Component {
   render () {
     return (
       <React.Fragment>
@@ -26,6 +24,6 @@ class App extends Component {
   }
 }
 
-ReactDOM.render(<App/>, document.getElementById('app'));
+ReactDOM.render(<Layout/>, document.getElementById('app'));
 
 module.hot.accept();

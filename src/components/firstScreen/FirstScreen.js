@@ -1,5 +1,5 @@
 import React from 'react'
-import leaves from '../images/Leaves.png';
+import leaves from '../../images/Leaves.png';
 
 export default class FirstScreen extends React.Component {
   render () {

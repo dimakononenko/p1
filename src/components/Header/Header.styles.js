@@ -19,45 +19,52 @@ export const HeaderContainer = styled.div`
     font-size: 1em;
   }
 `
+export const LogoNavHolder = styled.div`
+  display: flex;
+  align-items: flex-start;
+  @media ${device.laptop} {
+    justify-content: flex-start;
+  }
+`
 export const Logo = styled.img`
   src: url(${props => props.src});
   @media ${device.mobile} {
     display: none;
   }
   @media ${device.tablet} {
-    display: flex;
     margin-top: 45px;
     margin-left: 40px;
   }
   @media ${device.laptop} {
+    display: flex;
     right: 0;
     margin-left: 120px;
-    /* margin-right: 113px; */
+    margin-right: 113px;
   }
 `
 
 export const Ul = styled.ul`
   @media ${device.mobile} {
     flex-direction: column;
-    margin-top: 57px;
+    margin-top: 37px;
+    position: relative;
+    left: 8px;
   }
   @media ${device.tablet} {
-    position: relative;
-    right: 100px;
   }
   @media ${device.laptop} {
     display: flex;
     flex-direction: row;
-    margin-left: 100px;
-    position: relative;
-    right: 150px;
+    /* margin-left: 100px; */
+    /* right: 240px; */
+    margin-top: 57px;
   }
 `
 
 export const Li = styled.li`
   @media ${device.mobile} {
     list-style: none;
-    margin: 0px 16px 15px;
+    margin-bottom: 15px;
     margin-right: 32px
   }
   @media ${device.tablet} {
@@ -122,8 +129,8 @@ export const Button = styled.button`
     border-radius: 5px;
     background: none;
     position: relative;
-    margin: 20px 10% 10px;
-    margin-top: 45px;
+    margin: 20px 10% 10px 0;
+    margin-top: 25px;
   }
   @media ${device.tablet} {
     /* order: 2; */
@@ -131,6 +138,7 @@ export const Button = styled.button`
     width: 128px;
   }
   @media ${device.laptop} {
+    margin-top: 45px;
   }
 `
 
@@ -140,5 +148,14 @@ export const Img = styled.img`
   right: 0;
   z-index: -1;
   max-width: 660px;
-  width: 60%;
+  @media ${device.mobile} {
+    width: 60%;
+    max-width: 400px;
+  }
+  @media ${device.tablet} {
+    width: 40%;
+  }
+  @media ${device.laptop} {
+    width: 50%;
+  }
 `

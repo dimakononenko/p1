@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Header from './components/Header/Header';
-import FirstScreen from './components/firstScreen/FirstScreen';
+import FirstSection from './components/firstScreen/FirstSection';
 import SecondSection from './components/SecondSection/SecondSection';
 import styled from 'styled-components';
 import GlobalStyle from './theme/GlobalStyle';
@@ -16,7 +16,7 @@ class Layout extends Component {
         <Site>
           <GlobalStyle />
           <Header />
-          <FirstScreen />
+          <FirstSection />
           <SecondSection />
         </Site>
       </React.Fragment>

@@ -39,7 +39,7 @@ export const Logo = styled.img`
     display: flex;
     right: 0;
     margin-left: 120px;
-    margin-right: 113px;
+    /* margin-right: 113px; */
   }
 `
 
@@ -55,9 +55,9 @@ export const Ul = styled.ul`
   @media ${device.laptop} {
     display: flex;
     flex-direction: row;
-    /* margin-left: 100px; */
-    /* right: 240px; */
     margin-top: 57px;
+    position: relative;
+    right: 100px;
   }
 `
 
@@ -150,12 +150,16 @@ export const Img = styled.img`
   max-width: 660px;
   @media ${device.mobile} {
     width: 60%;
-    max-width: 400px;
+    max-width: 660px;
+  }
+  @media ${device.mobileL} {
+    width: 60%;
   }
   @media ${device.tablet} {
     width: 40%;
   }
   @media ${device.laptop} {
     width: 50%;
+    /* max-width: 600px; */
   }
 `

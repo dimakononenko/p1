@@ -15,13 +15,17 @@ export const Img = styled.img`
     position: absolute;
     width: 20%;
     max-width: 160px;
-    margin-top: 170px;
     z-index: -1;
-    margin-top: 450px;
+    margin-top: 500px;
   }
   @media ${device.tablet} {
+    max-height: 580px;
+    height: 50%;
+    max-width: 160px;
+    width: 50%;
   }
   @media ${device.laptop} {
+    margin-top: 450;
   }
 `
 export const InfoBlock = styled.div`
@@ -30,6 +34,9 @@ export const InfoBlock = styled.div`
     margin-left: 30px;
     margin-right: 30px;
     margin-top: 70px;
+  }
+  @media ${device.mobileL} {
+    width: 365px;
   }
   @media ${device.tablet} {
     width: 473px;

@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Header from './components/Header/Header';
 import FirstSection from './components/firstScreen/FirstSection';
 import SecondSection from './components/SecondSection/SecondSection';
+import Footer from './components/Footer/Footer'
 import styled from 'styled-components';
 import GlobalStyle from './theme/GlobalStyle';
 
@@ -18,6 +19,7 @@ class Layout extends Component {
           <Header />
           <FirstSection />
           <SecondSection />
+          <Footer />
         </Site>
       </React.Fragment>
     )

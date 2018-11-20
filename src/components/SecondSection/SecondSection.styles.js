@@ -107,6 +107,7 @@ export const Pbox = styled.p`
     font-size: 16px;
     color: #263238;
     line-height: 24px;
+    z-index: 2;
   }
   @media ${device.tablet} {
   }
@@ -129,12 +130,28 @@ export const H3 = styled.h3`
   @media ${device.laptop} {
   }
 `
-export const Img = styled.img`
+export const ImgBox = styled.img`
   @media ${device.mobile} {
     margin-left: 48px;
     margin-top: 49px;
   }
   @media ${device.tablet} {
+  }
+  @media ${device.laptop} {
+  }
+`
+
+export const Img = styled.img`
+  @media ${device.mobile} {
+    position: absolute;
+    z-index: -2;
+    top: 1000px;
+    background: #ffffff;
+    width: 100%;
+    /* box-shadow: 0 -18px 52px 30px rgba(245,245,245,0.9); */
+  }
+  @media ${device.tablet} {
+    top: 840px;
   }
   @media ${device.laptop} {
   }

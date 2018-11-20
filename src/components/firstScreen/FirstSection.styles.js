@@ -25,7 +25,7 @@ export const Img = styled.img`
     width: 50%;
   }
   @media ${device.laptop} {
-    margin-top: 450;
+    margin-top: 450px;
   }
 `
 export const InfoBlock = styled.div`

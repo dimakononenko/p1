@@ -4,6 +4,8 @@ import styled from 'styled-components';
 export const FirstScreenContainer = styled.div`
   @media ${device.mobile} {
     display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
   }
   @media ${device.tablet} {
   }
@@ -17,6 +19,7 @@ export const Img = styled.img`
     max-width: 160px;
     z-index: -1;
     margin-top: 500px;
+    left: 0;
   }
   @media ${device.tablet} {
     max-height: 580px;
@@ -30,10 +33,11 @@ export const Img = styled.img`
 `
 export const InfoBlock = styled.div`
   @media ${device.mobile} {
-    /* width: 365px; */
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
     margin-left: 30px;
     margin-right: 30px;
-    margin-top: 70px;
   }
   @media ${device.mobileL} {
     width: 365px;
@@ -44,8 +48,10 @@ export const InfoBlock = styled.div`
     margin-left: 50px;
   }
   @media ${device.laptop} {
-    margin-left: 120px; 
+    /* margin-left: 120px;  */
+    /* margin: 0 auto; */
     margin-top: 70px;
+    max-width: 1200px;
   }
 `
 export const H1 = styled.h1`

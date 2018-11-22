@@ -156,3 +156,18 @@ export const Img = styled.img`
   @media ${device.laptop} {
   }
 `
+export const Line = styled.div`
+  @media ${device.mobile} {
+    width: 100%;
+    max-width: 1200px;
+    height: 2px;
+    background-color: #EEEEEE;
+    margin: 0 auto;
+    margin-top: 118px;
+    margin-bottom: 82px;
+  }
+  @media ${device.tablet} {
+  }
+  @media ${device.laptop} {
+  }
+`

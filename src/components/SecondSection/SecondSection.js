@@ -11,6 +11,7 @@ import {
     ImgBox,
     InfoBoxContainer,
     InfoBoxGreen,
+    Line
   } from './SecondSection.styles';
   import InfoBox1 from '../../images/InfoBox1.png';
   import InfoBox2 from '../../images/InfoBox2.png';
@@ -51,6 +52,7 @@ export default class SecondSection extends React.Component {
           </InfoBox>
 
         </InfoBoxContainer>
+        <Line></Line>
 
       </SeconSectionContainer>
     )

@@ -1,6 +1,12 @@
 import React from 'react'
 import leaves from '../../images/Leaves.png';
-import { FirstScreenContainer, Img, InfoBlock, H1, P, Button } from './FirstSection.styles'
+import { FirstScreenContainer,
+  Img,
+  InfoBlock,
+  H1,
+  P,
+  Button
+} from './FirstSection.styles'
 
 export default () => (
   <FirstScreenContainer>

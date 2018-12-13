@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const FourthSectionContainer = styled.div`
   @media ${device.mobile} {
-    border: solid 1px grey;
+    /* border: solid 1px grey; */
     margin-top: 100px;
     display: flex;
     flex-direction: column;
@@ -41,10 +41,15 @@ export const Img = styled.img`
 export const InvestorReviews = styled.div`
   @media ${device.mobile} {
     margin-top: 121px;
+    display: flex;
+    align-items: flex-start;
+    overflow: hidden;
   }
   @media ${device.tablet} {
   }
   @media ${device.laptop} {
+    width: 100%;
+    justify-items: center;
   }
 `
 export const H3 = styled.h3`
@@ -68,38 +73,9 @@ export const P = styled.p`
   }
 `
 
-export const InvestorBox = styled.div`
-  @media ${device.mobile} {
-    width: 408px;
-    height: 296px;
-    border-radius: 5px;
-    background: #FFFFFF;
-    box-shadow: -1px 13px 20px 0 #F0F2F4;
-    font-size: 18px;
-    line-height: 32px;
-    font-family: Chivo-Regular;
-    color: #324148;
-    H3:first-of-type {
-      color: #66BB6A;
-      line-height: 0em;
-    }
-    H3 {
-      width: 200px;
-    }
-    P {
-      width: 312px;
-      margin-left: 48px;
-    }
-  }
-  @media ${device.tablet} {
-  }
-  @media ${device.laptop} {
-  }
-`
 
 export const Title = styled.div`
   @media ${device.mobile} {
-    border: solid 1px grey;
     margin: 0 auto;
     Img {
       position: absolute;
@@ -112,33 +88,14 @@ export const Title = styled.div`
   }
 `
 
-export const WithAvaH3 = styled.div``
-
-export const WithAva = styled.div`
-  @media ${device.mobile} {
-    display: flex;
-    align-items: flex-start;
-    margin: 47px 0px 0px 48px;
-    Img {
-      background: #FFFFFF;
-      border-radius: 50%;
-      box-shadow: 0 3px 20px 0 rgba(0,0,0,0.22);
-      margin-right: 25px;
-    }
-  }
-  @media ${device.tablet} {
-  }
-  @media ${device.laptop} {
-  }
-`
-
 
 export const Buttons = styled.div`
   @media ${device.mobile} {
     display: flex;
     flex-direction: row;
     margin: 0 auto;
-    margin-top: 56px;
+    position: relative;
+    bottom: 250px;
     button:last-of-type {
       :active{
       background: #F7FAF7;
@@ -176,6 +133,47 @@ export const Button = styled.button`
     height: 64px;
     border-radius: 50%;
     margin-right: 16px;
+  }
+  @media ${device.tablet} {
+  }
+  @media ${device.laptop} {
+  }
+`
+
+export const WhiteGradient = styled.div`
+  @media ${device.mobile} {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    bottom: 300px;
+  }
+  @media ${device.tablet} {
+  }
+  @media ${device.laptop} {
+  }
+`
+
+export const LeftSide = styled.div`
+  @media ${device.mobile} {
+    background-image: linear-gradient(270deg, rgba(255,255,255,0.00) 17%, #FFFFFF 62%);
+    width: 408px;
+    height: 296px;
+    position: relative;
+    right: 150px;
+  }
+  @media ${device.tablet} {
+  }
+  @media ${device.laptop} {
+  }
+`
+export const RightSide = styled.div`
+  @media ${device.mobile} {
+    background-image: linear-gradient(90deg, rgba(255,255,255,0.00) 17%, #FFFFFF 62%);
+    width: 408px;
+    height: 296px;
+    position: relative;
+    left: 150px;
   }
   @media ${device.tablet} {
   }

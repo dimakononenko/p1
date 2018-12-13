@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react';
 import { 
     FourthSectionContainer,
     H2,
@@ -6,39 +6,81 @@ import {
     P,
     Title,
     Img,
-    InvestorBox,
     WithAva,
     WithAvaH3,
     InvestorReviews,
     Buttons,
     Button,
+    WhiteGradient,
+    LeftSide,
+    RightSide,
   } from './FourthSection.styles';
-  import CombinedShape from '../../images/CombinedShape.png'
-  import ava1 from '../../images/ava1.png';
-  import ArrowBack from '../../images/ArrowBack.png'
-  import ArrowForward from '../../images/ArrowForward.png'
-  
-  export default () => (
-    <FourthSectionContainer>
-      <Title>
-        <Img src={CombinedShape}/>
-        <H2>What investors like you are saying about Zou</H2>
-      </Title>
-      <InvestorReviews>
-        <InvestorBox>
-          <WithAva>
-            <Img src={ava1}/>
-            <WithAvaH3>
-              <H3>Fernando Soler</H3>
-              <H3>Telecomunication Engineer</H3>
-            </WithAvaH3>
-          </WithAva>
-          <P>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae</P>
-        </InvestorBox>
-      </InvestorReviews>
-      <Buttons>
-        <Button><Img src={ArrowBack}/></Button>
-        <Button><Img id="last-button" src={ArrowForward}/></Button>
-      </Buttons>
-    </FourthSectionContainer>
-  );
+import CombinedShape from '../../images/CombinedShape.png'
+import data from '../../data/data';
+import ArrowBack from '../../images/ArrowBack.png';
+import ArrowForward from '../../images/ArrowForward.png';
+import InvestorBox from './InvestorBox/InvestorBox';
+
+export default class FourthSection extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+    }
+  }
+
+  nextProperty = () => {
+    const newIndex = this.state.property.index+1;
+    this.setState({
+      property: data.properties[newIndex]
+    })
+  }
+
+  prevProperty = () => {
+    const newIndex = this.state.property.index-1;
+    this.setState({
+      property: data.properties[newIndex]
+    })
+  }
+
+  render() {
+    const {properties, property} = this.state;
+    return (
+      <FourthSectionContainer>
+        <Title>
+          <Img src={CombinedShape}/>
+          <H2>What investors like you are saying about Zou</H2>
+        </Title>
+        <InvestorReviews>
+          <InvestorBox />
+          <InvestorBox />
+          <InvestorBox />
+          <InvestorBox />
+          <InvestorBox />
+        </InvestorReviews>
+        <WhiteGradient>
+          <LeftSide></LeftSide>
+          <RightSide></RightSide>
+        </WhiteGradient>
+        <Buttons>
+
+          <Button
+            data-micron="fade"
+            // onClick={() => this.prevProperty()}
+            // disabled={property.index === DataCue.properties.length-1}
+            >
+            <Img src={ArrowBack}/>
+          </Button>
+
+          <Button
+            data-micron="fade"
+            // nClick={() => this.prevProperty()}
+            // disabled={property.index === DataCue.properties.length+1}
+            >
+            <Img id="last-button" src={ArrowForward}/>
+          </Button>
+          
+        </Buttons>
+      </FourthSectionContainer>
+    )
+  }
+};

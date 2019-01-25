@@ -16,71 +16,64 @@ import {
     RightSide,
   } from './FourthSection.styles';
 import CombinedShape from '../../images/CombinedShape.png'
-import data from '../../data/data';
 import ArrowBack from '../../images/ArrowBack.png';
 import ArrowForward from '../../images/ArrowForward.png';
-import InvestorBox from './InvestorBox/InvestorBox';
+import Card from './Card';
+// import data from '../../data/data';
 
-export default class FourthSection extends Component {
+export default class FourthSection extends React.Component {
   constructor(props){
     super(props);
     this.state = {
     }
   }
 
-  nextProperty = () => {
-    const newIndex = this.state.property.index+1;
-    this.setState({
-      property: data.properties[newIndex]
-    })
+  nextInvestor = () => {
   }
 
-  prevProperty = () => {
-    const newIndex = this.state.property.index-1;
-    this.setState({
-      property: data.properties[newIndex]
-    })
+  prevInvestor = () => {
+    // const newIndex = this.state.investor.index-1;
+    // this.setState({
+    //   investor: data.investors[newIndex]
+    // })
   }
 
   render() {
-    const {properties, property} = this.state;
+    // const {investor} = this.state;
     return (
+
       <FourthSectionContainer>
         <Title>
           <Img src={CombinedShape}/>
           <H2>What investors like you are saying about Zou</H2>
         </Title>
         <InvestorReviews>
-          <InvestorBox />
-          <InvestorBox />
-          <InvestorBox />
-          <InvestorBox />
-          <InvestorBox />
+          <Card/>
         </InvestorReviews>
         <WhiteGradient>
           <LeftSide></LeftSide>
           <RightSide></RightSide>
         </WhiteGradient>
         <Buttons>
-
           <Button
             data-micron="fade"
-            // onClick={() => this.prevProperty()}
-            // disabled={property.index === DataCue.properties.length-1}
+            // onClick={() => this.nextInvestor()}
+            // disabled={investor.index === data.investors.length-1}
             >
             <Img src={ArrowBack}/>
           </Button>
-
           <Button
             data-micron="fade"
-            // nClick={() => this.prevProperty()}
-            // disabled={property.index === DataCue.properties.length+1}
+            // onClick={() => this.prevInvestor()}
+            // disabled={investor.index === 0}
             >
             <Img id="last-button" src={ArrowForward}/>
           </Button>
-          
         </Buttons>
       </FourthSectionContainer>
     )
   }
 };
+
+
+

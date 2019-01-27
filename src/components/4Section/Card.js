@@ -1,51 +1,36 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import { device } from '../../theme/GlobalStyle';
 import ava1 from '../../images/ava1.png';
 
-export default class Card extends React.Component {
-  constructor(props){
-    super(props);
+
+export default class Card extends Component {
+  constructor() {
+    super();
+
     this.state = {
-      ava: [],
-      name: [],
-      position: [],
-      quote: [],
-    };
+      users : []
+    }
   }
-
   componentDidMount() {
-    fetch('https://jsonplaceholder.typicode.com/users')
-      .then(res => res.json())
-      .then(json => {
-        this.setState({
-          isLoaded: true,
-          items: json,
-        })
-      })
-      .then(console.log('ddd'));
-    // const url = 'https://randomuser.me/api/?results=10';
-    // const response = await fetch(url);
-    // const data = await response.json();
-    // this.setState({ person: data.results[0]});
+    this.getItems();
   }
 
-  fetchData(){
-    
-  }
+  getItems = () => {
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then(res => res.json())
+    .then(data => this.setState({users: data}))
+    console.log(this.state.users);
+    }
 
   render() {
-    const { isLoaded, items } = this.state;
-    if (!isLoaded) {
-      return <div>Loading...</div>;
-    }
     return (
       <InvestorBoxWrapper>
         <InvestorBox>
           <WithAva>
             <Img src={ava1}/>
             <WithAvaH3>
-              <H3>Fernando Soler</H3>
+              <H3>{}</H3>
               <H3>Telecomunication Engineer</H3>
             </WithAvaH3>
           </WithAva>
@@ -55,11 +40,61 @@ export default class Card extends React.Component {
     )
   }
 }
+//   constructor(props){
+//     super(props);
+//     this.state = {
+//       items: [],
+//       name:'',
+      
+//     }   
+//   }
+
+//   componentDidMount(){
+//     this.getItems();
+//     this.setState({name: results })
+//   }
+
+//   getItems() {
+//     fetch('https://randomuser.me/api/')
+//       .then(results =>  console.log(results))
+//   }
+
+//   render() {
+//     console.log(this.state);
+    
+//     return (
+//       <div className='privet'>
+//         {this.state.items.map(function(item, index) {
+//           return (
+//             <p key={this.index}>{this.item}</p>
+//           )
+//         })}
+//       </div>
+//     )
+        
+//   }
+// };
+
+// <InvestorBoxWrapper>
+//   <InvestorBox>
+//     <WithAva>
+//       <Img src={ava1}/>
+//       <WithAvaH3>
+//         <H3></H3>
+//         <H3>Telecomunication Engineer</H3>
+//       </WithAvaH3>
+//     </WithAva>
+//     <P>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae</P>
+//   </InvestorBox>
+// </>
 
 
-
-// export default Card;
-
+    
+    
+    
+    
+    
+    
 
 // import React from 'react'
 // import styled from 'styled-components';

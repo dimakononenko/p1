@@ -1,30 +1,27 @@
-import React, { Component } from 'react';
-import { 
-    FourthSectionContainer,
-    H2,
-    H3,
-    P,
-    Title,
-    Img,
-    WithAva,
-    WithAvaH3,
-    InvestorReviews,
-    Buttons,
-    Button,
-    WhiteGradient,
-    LeftSide,
-    RightSide,
-  } from './FourthSection.styles';
-import CombinedShape from '../../images/CombinedShape.png'
+import React from 'react';
 import ArrowBack from '../../images/ArrowBack.png';
 import ArrowForward from '../../images/ArrowForward.png';
+import CombinedShape from '../../images/CombinedShape.png';
 import Card from './Card';
+import {
+  Button,
+  Buttons,
+  FourthSectionContainer,
+  H2,
+  Img,
+  InvestorReviews,
+  LeftSide,
+  RightSide,
+  Title,
+  WhiteGradient
+} from './FourthSection.styles';
 // import data from '../../data/data';
 
 export default class FourthSection extends React.Component {
   constructor(props){
     super(props);
     this.state = {
+     
     }
   }
 

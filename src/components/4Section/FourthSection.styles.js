@@ -155,13 +155,13 @@ export const WhiteGradient = styled.div`
 `
 
 export const LeftSide = styled.div`
-  @media ${device.mobile} {
+  /* @media ${device.mobile} {
     background-image: linear-gradient(270deg, rgba(255,255,255,0.00) 17%, #FFFFFF 62%);
     width: 408px;
     height: 296px;
     position: relative;
     right: 150px;
-  }
+  } */
   @media ${device.tablet} {
   }
   @media ${device.laptop} {

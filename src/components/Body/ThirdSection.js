@@ -396,7 +396,6 @@ const HowItWorksBanner = styled.div`
     flex-direction: column;
     padding: 106px 30px 0 30px;
     background-repeat: no-repeat;
-    background: url(../../images/background_third_section.png) repeat 0 0;
     margin: 0 auto;
     H2 {
       font-family: Chivo-Bold;

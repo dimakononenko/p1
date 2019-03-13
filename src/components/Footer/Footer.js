@@ -64,7 +64,7 @@ export default () => (
 
 const ContainerBanner = styled.div`
   @media ${device.mobile} {
-    width: 1056px;
+    width: 100%;
     height: 296px;
     max-height: 296px;
     background: #FFFFFF;
@@ -74,7 +74,7 @@ const ContainerBanner = styled.div`
     color: #000000;
     text-align: center;
     line-height: 64px;
-    margin: 184px 30px 126px 30px;
+    margin: 184px 0px 126px 0px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -152,7 +152,7 @@ const FooterContainer = styled.div`
     display: flex;
     max-width: 1056px;
     margin: 0 auto;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: column;
     padding: 0px 20px;
   }

@@ -1,7 +1,27 @@
+import React from 'react'
 import { device } from '../../theme/GlobalStyle';
 import styled from 'styled-components';
+import leaves from '../../images/Leaves.png';
 
-export const FirstScreenContainer = styled.div`
+
+export default () => (
+  <FirstScreenContainer>
+    <Img src={leaves} id="illustrationLeaves"/>
+    <InfoBlock>
+      <H1>A New Way to Invest in Agriculture</H1>
+      <P>Zou provides farmes, ranchers, private foresters, and agricultural producers with online self service applications and educational materials.</P>
+      <Button href="#!" data-micron="bounce">Invest Now</Button>
+    </InfoBlock>
+  </FirstScreenContainer>
+)
+
+// STYLES STYLES STYLES STYLES STYLES STYLES :
+// STYLES STYLES STYLES STYLES STYLES STYLES :
+// STYLES STYLES STYLES STYLES STYLES STYLES :
+// STYLES STYLES STYLES STYLES STYLES STYLES :
+// STYLES STYLES STYLES STYLES STYLES STYLES :
+
+const FirstScreenContainer = styled.div`
   @media ${device.mobile} {
     display: flex;
     max-width: 1200px;
@@ -12,7 +32,7 @@ export const FirstScreenContainer = styled.div`
   @media ${device.laptop} {
   }
 `
-export const Img = styled.img`
+const Img = styled.img`
   @media ${device.mobile} {
     position: absolute;
     width: 20%;
@@ -31,7 +51,7 @@ export const Img = styled.img`
     margin-top: 450px;
   }
 `
-export const InfoBlock = styled.div`
+const InfoBlock = styled.div`
   @media ${device.mobile} {
     display: flex;
     flex-direction: column;
@@ -54,7 +74,7 @@ export const InfoBlock = styled.div`
     max-width: 1200px;
   }
 `
-export const H1 = styled.h1`
+const H1 = styled.h1`
   @media ${device.mobile} {
     font-family: Chivo-Bold;
     font-size: 37px;
@@ -67,9 +87,9 @@ export const H1 = styled.h1`
   }
 `
 
-export const P = styled.p`
+const P = styled.p`
   @media ${device.mobile} {
-    font-family: Chivo-Regular;
+    -family: Chivo-Regular;
     font-size: 18px;
     color: #263238;
     text-align: left;
@@ -81,7 +101,7 @@ export const P = styled.p`
   @media ${device.laptop} {
   }
 `
-export const Button = styled.button`
+const Button = styled.button`
   @media ${device.mobile} {
     box-shadow: 0 13px 20px 0 rgba(118, 196, 125, 0.41);
     background: #66BB6A;
